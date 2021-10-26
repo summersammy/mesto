@@ -9,12 +9,12 @@ const nameElement = popupElement.querySelector('#input-name');
 const professionElement = popupElement.querySelector('#input-profession');
 const hearts = document.querySelectorAll('.elements__heart');
 
-for (let i = 0; i < hearts.length; i++) {
-    const currentHeart = hearts[i];
-    currentHeart.addEventListener('click', function (event) {
-        event.target.classList.toggle('elements__heart-black');
-    })
-};
+// for (let i = 0; i < hearts.length; i++) {
+//     const currentHeart = hearts[i];
+//     currentHeart.addEventListener('click', function (event) {
+//         event.target.classList.toggle('elements__heart-black');
+//     })
+// };
 
 
 function closePopup() {
