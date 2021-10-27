@@ -1,6 +1,6 @@
 const pageElement = document.querySelector('.page');
-const currentNameElement = pageElement.querySelector('.profile__name');
-const currentProfessionElement = pageElement.querySelector('.profile__profession');
+const currentNameElement = pageElement.querySelector('.profile__info-title');
+const currentProfessionElement = pageElement.querySelector('.profile__info-subtitle');
 const openPopupButton = document.querySelector('.profile__edit-button');
 const popupElement = document.querySelector('.popup');
 const closePopupButton = popupElement.querySelector('.popup__close');
@@ -18,13 +18,13 @@ const hearts = document.querySelectorAll('.elements__heart');
 
 
 function closePopup() {
-    popupElement.classList.remove('popup__opened');
+    popupElement.classList.remove('popup_opened');
 }
 
 function openPopup() {
     nameElement.value = currentNameElement.textContent;
     professionElement.value = currentProfessionElement.textContent;
-    popupElement.classList.add('popup__opened');
+    popupElement.classList.add('popup_opened');
 };
 
 form.addEventListener('submit', function editProfile(evt) {

@@ -8,11 +8,11 @@
     font-size: 18px;
     line-height: 22px;
     cursor: pointer;
-    margin: 48px 36px;
+    margin: 48px 36px 37px;
 }
 
 .popup__save:hover {
-    opacity: 0.6;
+    opacity: 0.8;
 }
 
 @media all and (max-width: 767px) {
@@ -21,5 +21,6 @@
         height: 46px;
         font-size: 14px;
         line-height: 17px;
+        margin: 45px 41px 25px;
     }
 }

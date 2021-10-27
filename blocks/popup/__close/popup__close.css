@@ -11,6 +11,25 @@
 }
 
 .popup__close:hover {
-    opacity: 0.5;
+    opacity: 0.6;
     cursor: pointer;
+    transition: all .3s ease-in-out;
+    -webkit-transition: 1s ease-in-out;
+    -moz-transition: 1s ease-in-out;
+    -ms-transition: 1s ease-in-out;
+    -o-transition: 1s ease-in-out;
+}
+
+@media all and (max-width: 767px) {
+    .popup__close {
+        background: transparent center url("../../../images/close_icon_small.svg");
+        background-size: auto;
+        background-repeat: no-repeat;
+        border: none;
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        top: -35px;
+        right: 0;
+    }
 }

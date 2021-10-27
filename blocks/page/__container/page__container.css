@@ -8,7 +8,6 @@
 
 @media all and (max-width: 767px) {
     .page__container {
-        width: 100%;
         min-height: 100vh;
         display: flex;
         flex-direction: column;

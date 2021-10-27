@@ -15,8 +15,9 @@
 
 @media all and (max-width: 767px) {
     .profile {
-        display: flex;
-        flex-direction: column;
         align-items: center;
+        margin-left: 19px;
+        margin-right: 19px;
+        margin-top: 40px;
     }
 }

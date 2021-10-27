@@ -2,6 +2,7 @@
     cursor: pointer;
     align-self: flex-end;
     background-image: url(../../../images/heart.svg);
+    transition: all .3s ease-in-out;
     width: 22px;
     height: 19px;
     background-size: contain;
@@ -10,5 +11,10 @@
 }
 
 .elements__heart:hover {
-    opacity: 0.6;
+    opacity: 0.5;
+    transition: 1s ease-in-out;
+    -webkit-transition: 1s ease-in-out;
+    -moz-transition: 1s ease-in-out;
+    -ms-transition: 1s ease-in-out;
+    -o-transition: 1s ease-in-out;
 }

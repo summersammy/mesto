@@ -2,7 +2,7 @@
 <html lang="ru">
 
 <head>
-  <title>Mesto Russia</title>
+  <title>Место Россия</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./pages/index.css">
@@ -21,15 +21,13 @@
         <div class="profile__edit">
           <div class="profile__info">
             <div class="profile__changer">
-              <h1 class="profile__info-title profile__name">Жак-Ив&nbsp;Кусто</h1>
+              <h1 class="profile__info-title">Жак-Ив&nbsp;Кусто</h1>
               <button class="profile__edit-button">
-                <img class="profile__pencil" src="./images/pencil.svg" alt="карандаш редактирования профиля">
-              </button>
+              </button type="button">
             </div>
-            <h2 class="profile__info-subtitle profile__profession">Исследователь океана</h2>
+            <p class="profile__info-subtitle">Исследователь океана</p>
           </div>
           <button class="profile__add-button">
-            <img class="profile__plus" src="./images/plus.svg" alt="плюс для добавления фото">
           </button>
         </div>
       </section>
@@ -39,28 +37,28 @@
           <li class="elements__list-item">
             <img class="elements__item" src="./images/altai.jpg" alt="Река на Алтае">
             <div class="elements__title">
-              <p class="elements__text">Алтай</p>
+              <h3 class="elements__text">Алтай</h3>
               <div class="elements__heart"></div>
             </div>
           </li>
           <li class="elements__list-item">
             <img class="elements__item" src="./images/baikal.jpeg" alt="Байкал зимой">
             <div class="elements__title">
-              <p class="elements__text">Байкал</p>
+              <h3 class="elements__text">Байкал</h3>
               <div class="elements__heart"></div>
             </div>
           </li>
           <li class="elements__list-item">
             <img class="elements__item" src="./images/elbrus.jpeg" alt="гора Эльбрус">
             <div class="elements__title">
-              <p class="elements__text">Эльбрус</p>
+              <h3 class="elements__text">Эльбрус</h3>
               <div class="elements__heart"></div>
             </div>
           </li>
           <li class="elements__list-item">
             <img class="elements__item" src="./images/kamchatka.jpeg" alt="озеро на Камчатке">
             <div class="elements__title">
-              <p class="elements__text">Камчатка</p>
+              <h3 class="elements__text">Камчатка</h3>
               <div class="elements__heart"></div>
             </div>
           </li>
@@ -68,14 +66,14 @@
             <img class="elements__item" src="./images/karachaevo-cherkesk.jpeg"
               alt="Шоанинский древнехристианский храм в Карачаево-Черкесии">
             <div class="elements__title">
-              <p class="elements__text">Карачаево-Черкесия</p>
+              <h3 class="elements__text">Карачаево-Черкесия</h3>
               <div class="elements__heart"></div>
             </div>
           </li>
           <li class="elements__list-item">
             <img class="elements__item" src="./images/teriberka.jpeg" alt="Северное сияние на Териберке">
             <div class="elements__title">
-              <p class="elements__text">Териберка</p>
+              <h3 class="elements__text">Териберка</h3>
               <div class="elements__heart"></div>
             </div>
           </li>
@@ -87,8 +85,8 @@
     </footer>
     <section class="popup">
       <div class="popup__container">
-        <button class="popup__close"></button>
-        <form>
+        <button class="popup__close" type="button"></button>
+        <form name="edit_name_form">
           <h2 class="popup__title">Редактировать профиль</h2>
           <input type="text" name="name" id="input-name" value="Жак-Ив&nbsp;Кусто" class="popup__text">
           <input type="text" name="profession" id="input-profession" value="Исследователь океана" class="popup__text">
