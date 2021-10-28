@@ -8,6 +8,8 @@
     background-size: contain;
     background-repeat: no-repeat;
     background-origin: border-box;
+    border: none;
+    background-color: transparent;
 }
 
 .elements__heart:hover {

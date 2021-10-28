@@ -5,4 +5,5 @@
     overflow: hidden;
     padding-top: 21px;
     flex: 1;
+    max-width: 246px;
 }
