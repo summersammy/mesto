@@ -9,11 +9,44 @@
 </head>
 
 <body class="page">
+  <template id="card-template">
+    <li class="elements__list-item">
+      <img class="elements__item">
+      <div class="elements__title">
+        <h2 class="elements__text"></h2>
+        <button type="button" class="elements__heart"></button>
+        <button type="button" class="elements__trash"></button>
+      </div>
+    </li>
+  </template>
+
+  <template id="edit_name_template">
+    <form name="edit_name_form">
+      <h2 class="popup__title">Редактировать профиль</h2>
+      <input type="text" name="name" id="input-name" value="Жак-Ив&nbsp;Кусто" class="popup__text">
+      <input type="text" name="profession" id="input-profession" value="Исследователь океана" class="popup__text">
+      <button type="submit" class="popup__save">Сохранить</button>
+    </form>
+  </template>
+
+  <template id="add_place_template">
+    <form name="add_place_form">
+      <h2 class="popup__title">Новое место</h2>
+      <input type="text" name="name" id="input-place-name" placeholder="Название" class="popup__text">
+      <input type="url" name="place" id="input-place-image-url" placeholder="Ссылка на картинку" class="popup__text">
+      <button type="submit" class="popup__save">Сохранить</button>
+    </form>
+  </template>
+
+  <template id="image_view_template">
+    <img class="popup__image">
+    <p class="popup__image-caption"></p>
+  </template>
+
   <div class="page__container">
     <header class="header">
       <img class="header__logo" src="./images/logo.svg" alt="логотип Место Россия">
     </header>
-
 
     <main>
       <section class="profile">
@@ -34,64 +67,17 @@
 
       <section class="elements">
         <ul class="elements__list">
-          <li class="elements__list-item">
-            <img class="elements__item" src="./images/altai.jpg" alt="Река на Алтае">
-            <div class="elements__title">
-              <h2 class="elements__text">Алтай</h2>
-              <button type="button" class="elements__heart"></button>
-            </div>
-          </li>
-          <li class="elements__list-item">
-            <img class="elements__item" src="./images/baikal.jpeg" alt="Байкал зимой">
-            <div class="elements__title">
-              <h2 class="elements__text">Байкал</h2>
-              <button type="button" class="elements__heart"></button>
-            </div>
-          </li>
-          <li class="elements__list-item">
-            <img class="elements__item" src="./images/elbrus.jpeg" alt="гора Эльбрус">
-            <div class="elements__title">
-              <h2 class="elements__text">Эльбрус</h2>
-              <button type="button" class="elements__heart"></button>
-            </div>
-          </li>
-          <li class="elements__list-item">
-            <img class="elements__item" src="./images/kamchatka.jpeg" alt="озеро на Камчатке">
-            <div class="elements__title">
-              <h2 class="elements__text">Камчатка</h2>
-              <button type="button" class="elements__heart"></button>
-            </div>
-          </li>
-          <li class="elements__list-item">
-            <img class="elements__item" src="./images/karachaevo-cherkesk.jpeg"
-              alt="Шоанинский древнехристианский храм в Карачаево-Черкесии">
-            <div class="elements__title">
-              <h2 class="elements__text">Карачаево-Черкесия</h2>
-              <button type="button" class="elements__heart"></button>
-            </div>
-          </li>
-          <li class="elements__list-item">
-            <img class="elements__item" src="./images/teriberka.jpeg" alt="Северное сияние на Териберке">
-            <div class="elements__title">
-              <h2 class="elements__text">Териберка</h2>
-              <button type="button" class="elements__heart"></button>
-            </div>
-          </li>
         </ul>
       </section>
     </main>
     <footer class="footer">
       <p class="footer__copyright">&copy; 2021 Mesto Russia </p>
     </footer>
+
     <section class="popup">
       <div class="popup__container">
         <button class="popup__close" type="button" aria-label="close"></button>
-        <form name="edit_name_form">
-          <h2 class="popup__title">Редактировать профиль</h2>
-          <input type="text" name="name" id="input-name" value="Жак-Ив&nbsp;Кусто" class="popup__text">
-          <input type="text" name="profession" id="input-profession" value="Исследователь океана" class="popup__text">
-          <button type="submit" class="popup__save">Сохранить</button>
-        </form>
+        <div class="popup__content"></div>
       </div>
     </section>
 

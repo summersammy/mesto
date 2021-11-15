@@ -1,0 +1,21 @@
+.elements__trash {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    border: none;
+    width: 18px;
+    height: 19px;
+    background-color: #ffffff;
+    -webkit-mask-image: url(../../../images/Trash.svg);
+    mask-image: url(../../../images/Trash.svg);
+    cursor: pointer;
+    transition: opacity 300ms ease-out;
+    -webkit-transition: opacity 300ms ease-out;
+    -moz-transition: opacity 300ms ease-out;
+    -ms-transition: opacity 300ms ease-out;
+    -o-transition: opacity 300ms ease-out;
+}
+
+.elements__trash:hover {
+    opacity: 0.6;
+}

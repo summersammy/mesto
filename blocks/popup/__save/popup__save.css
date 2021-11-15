@@ -9,6 +9,8 @@
     line-height: 22px;
     cursor: pointer;
     margin: 48px 36px 37px;
+    padding: 0;
+    border: none;
 }
 
 .popup__save:hover {

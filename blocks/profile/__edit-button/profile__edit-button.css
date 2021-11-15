@@ -11,12 +11,12 @@
     background-position: center;
     background-repeat: no-repeat;
     background-origin: border-box;
+    transition: all .3s ease-in-out;
 }
 
 .profile__edit-button:hover {
     cursor: pointer;
     opacity: 0.6;
-    transition: all .3s ease-in-out;
 }
 
 @media all and (max-width: 767px) {

@@ -16,5 +16,6 @@
     .popup__text {
         max-width: 238px;
         align-self: center;
+        margin: 30px 41px 0;
     }
 }

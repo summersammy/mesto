@@ -1,3 +1,5 @@
 .popup_opened {
-    display: flex;
+    z-index: 5;
+    visibility: visible;
+    opacity: 1;
 }

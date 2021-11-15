@@ -1,3 +1,7 @@
 .elements__heart-black {
     background-image: url(../../../../images/blackheart.svg);
 }
+
+.elements__heart-black:hover {
+    opacity: 1;
+}

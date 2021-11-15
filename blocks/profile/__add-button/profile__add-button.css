@@ -10,6 +10,7 @@
     -moz-border-radius: 2px;
     -ms-border-radius: 2px;
     -o-border-radius: 2px;
+    transition: all .3s ease-in-out;
 }
 
 .profile__add-button::before {
@@ -24,7 +25,6 @@
 
 .profile__add-button:hover {
     opacity: 0.6;
-    transition: all .3s ease-in-out;
 }
 
 @media all and (max-width: 950px) {
