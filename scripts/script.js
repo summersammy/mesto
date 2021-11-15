@@ -87,13 +87,13 @@ function openImagePopup(event) {
         .closest('.elements__list-item')
         .querySelector('.elements__text')
         .textContent;
-    imageViewPopup.classList.add('popup_opened');
+    imageViewPopup.classList.add('popup_opened', 'popup__image-overlay');
 }
 
 
 
 function closePopup(popupElement) {
-    popupElement.classList.remove('popup_opened');
+    popupElement.classList.remove('popup_opened', 'popup__image-overlay');
 }
 
 initialCards.forEach(function (item) {
