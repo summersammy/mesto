@@ -109,7 +109,7 @@ initialCards.forEach(function (item) {
 });
 
 function openAddPopup() {
-    addPlacePopup.classList.add('popup_opened');
+    openPopup(addPlacePopup);
 }
 
 openEditPopupButton.addEventListener('click', openEditPopup);
