@@ -1,7 +1,8 @@
 import { initialCards } from './cards.js'
 
 // Profile
-const editProfileForm = document.querySelector('#profile_form', '#card_form');
+const popupEditProfile = document.querySelector('#edit_profile_popup');
+const editProfileForm = popupEditProfile.querySelector('form');
 const currentProfileNameElement = document.querySelector('.profile__info-title');
 const currentProfessionElement = document.querySelector('.profile__info-subtitle');
 const openEditPopupButton = document.querySelector('.profile__edit-button');
@@ -12,8 +13,6 @@ const cardTemplate = document.querySelector('#card-template').content;
 const cardList = document.querySelector('.elements__list');
 
 // Edit profile popup
-const popupEditProfile = document.querySelector('#edit_profile_popup');
-const editProfilePopupContainer = popupEditProfile.querySelector('.popup__container');
 const editProfilePopupCloseButton = popupEditProfile.querySelector('.popup__close');
 const editProfileName = popupEditProfile.querySelector('#input-name');
 const editProfileProfession = popupEditProfile.querySelector('#input-profession');
@@ -23,15 +22,11 @@ const addPlacePopup = document.querySelector('#add_place_popup')
 const addPlaceForm = addPlacePopup.querySelector('form');
 const placeName = document.querySelector('#input-place-name');
 const placeImageUrl = document.querySelector('#input-place-image-url');
-const popupAddCard = document.querySelector('#add_place_popup');
 const addPlacePopupCloseButton = addPlacePopup.querySelector('.popup__close');
 
 // Image view popup
 const imageViewPopup = document.querySelector('#image_view_popup');
 const imageViewPopupCloseButton = imageViewPopup.querySelector('.popup__close');
-
-//Popup
-const popups = document.querySelector('.popup');
 
 function openPopup(popup) {
     popup.classList.add('popup_opened');
