@@ -1,5 +1,7 @@
+import { initialCards } from './cards'
+
 // Profile
-const editProfileForm = document.querySelector('[name=edit_profile_form]');
+const editProfileForm = document.querySelector('#edit_profile_form');
 const currentProfileNameElement = document.querySelector('.profile__info-title');
 const currentProfessionElement = document.querySelector('.profile__info-subtitle');
 const openEditPopupButton = document.querySelector('.profile__edit-button');
@@ -13,10 +15,34 @@ const cardList = document.querySelector('.elements__list');
 const popupEditProfile = document.querySelector('#edit_profile_popup');
 const editProfilePopupContainer = popupEditProfile.querySelector('.popup__container');
 const editProfilePopupCloseButton = popupEditProfile.querySelector('.popup__close');
-
 const editProfileName = popupEditProfile.querySelector('#input-name');
 const editProfileProfession = popupEditProfile.querySelector('#input-profession');
 
+// Add card form
+const addPlacePopup = document.querySelector('#add_place_popup')
+const addPlaceForm = addPlacePopup.querySelector('form');
+const placeName = document.querySelector('#input-place-name');
+const placeImageUrl = document.querySelector('#input-place-image-url');
+const popupAddCard = document.querySelector('#add_place_popup');
+const addPlacePopupCloseButton = addPlacePopup.querySelector('.popup__close');
+
+// Image view popup
+const imageViewPopup = document.querySelector('#image_view_popup');
+const imageViewPopupCloseButton = imageViewPopup.querySelector('.popup__close');
+
+//Popup
+const popups = document.querySelector('.popup');
+
+function openPopup(popup) {
+    popup.classList.add('popup_opened');
+}
+
+function closePopup(popup) {
+    popup.classList.remove('popup_opened', 'popup__image-overlay');
+}
+
+
+//Functions
 
 editProfileForm.addEventListener('submit', function editProfile(evt) {
     evt.preventDefault();
@@ -28,25 +54,19 @@ editProfileForm.addEventListener('submit', function editProfile(evt) {
 function openEditPopup() {
     editProfileName.value = currentProfileNameElement.textContent;
     editProfileProfession.value = currentProfessionElement.textContent;
-    popupEditProfile.classList.add('popup_opened');
+    openPopup(popupEditProfile)
 };
 
-// Add card form
-const addPlacePopup = document.querySelector('#add_place_popup')
-const addPlaceForm = addPlacePopup.querySelector('form');
-const placeName = document.querySelector('#input-place-name');
-const placeImageUrl = document.querySelector('#input-place-image-url');
-const popupAddCard = document.querySelector('#add_place_popup');
-const addPlacePopupCloseButton = addPlacePopup.querySelector('.popup__close');
-
-addPlaceForm.addEventListener('submit', function addPlace(evt) {
+function addPlace(evt) {
     evt.preventDefault();
     const card = createCard(placeName.value, placeImageUrl.value);
     addCard(card);
     closePopup(addPlacePopup);
     placeName.value = '';
     placeImageUrl.value = '';
-})
+}
+
+addPlaceForm.addEventListener('submit', addPlace)
 
 function createCard(name, imageLink) {
     const cardElement = cardTemplate.querySelector('.elements__list-item').cloneNode(true);
@@ -74,26 +94,18 @@ function addCard(card) {
     cardList.prepend(card);
 }
 
-// Image view popup
-const imageViewPopup = document.querySelector('#image_view_popup');
-const imageViewPopupCloseButton = imageViewPopup.querySelector('.popup__close');
-
 function openImagePopup(event) {
-    const image = imageViewPopup.querySelector('img');
-    const caption = imageViewPopup.querySelector('p');
+    const image = imageViewPopup.querySelector('.popup__image');
+    const caption = imageViewPopup.querySelector('.popup__image-caption');
 
     image.src = event.target.src;
+    image.alt = event.target.alt;
     caption.textContent = event.target
         .closest('.elements__list-item')
         .querySelector('.elements__text')
         .textContent;
-    imageViewPopup.classList.add('popup_opened', 'popup__image-overlay');
-}
-
-
-
-function closePopup(popupElement) {
-    popupElement.classList.remove('popup_opened', 'popup__image-overlay');
+    openPopup(imageViewPopup);
+    imageViewPopup.classList.add('popup__image-overlay');
 }
 
 initialCards.forEach(function (item) {
@@ -107,6 +119,8 @@ function openAddPopup() {
 
 openEditPopupButton.addEventListener('click', openEditPopup);
 openAddPopupButton.addEventListener('click', openAddPopup);
+
+
 
 imageViewPopupCloseButton.addEventListener('click', function () {
     closePopup(imageViewPopup);
