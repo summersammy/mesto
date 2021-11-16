@@ -1,7 +1,7 @@
 import { initialCards } from './cards.js'
 
 // Profile
-const editProfileForm = document.querySelector('#profile_form');
+const editProfileForm = document.querySelector('#profile_form', '#card_form');
 const currentProfileNameElement = document.querySelector('.profile__info-title');
 const currentProfessionElement = document.querySelector('.profile__info-subtitle');
 const openEditPopupButton = document.querySelector('.profile__edit-button');
