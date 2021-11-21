@@ -28,14 +28,26 @@ const addPlacePopupCloseButton = addPlacePopup.querySelector('.popup__close');
 const imageViewPopup = document.querySelector('#image_view_popup');
 const imageViewPopupCloseButton = imageViewPopup.querySelector('.popup__close');
 
+function closePopup(popup) {
+    popup.classList.remove('popup_opened', 'popup__image-overlay');
+    // popup.removeEventListner('click',);
+}
+
 function openPopup(popup) {
     popup.classList.add('popup_opened');
 }
 
-function closePopup(popup) {
-    popup.classList.remove('popup_opened', 'popup__image-overlay');
-}
-
+const popupsElements = document.querySelectorAll('.popup');
+const popupsList = Array.from(popupsElements);
+popupsList.forEach((popup) => {
+    popup.addEventListener('click', (event) => {
+        const popupContainer = popup.querySelector('.popup__container');
+        if (!popupContainer.contains(event.target)) closePopup(popup);
+    })
+    document.addEventListener('keydown', (evt) => {
+        if (evt.key === 'Escape') closePopup(popup);
+    })
+})
 
 //Functions
 
