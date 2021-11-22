@@ -26,6 +26,7 @@ const placeImageUrl = document.querySelector('#input-place-image-url');
 // Image view popup
 const imageViewPopup = document.querySelector('#image_view_popup');
 
+
 //Popup, Save, etc
 const popups = document.querySelectorAll('.popup')
 const submitButton = addPlacePopup.querySelector('.popup__save');
@@ -50,8 +51,8 @@ function closePopupByOverlay(evt) {
     closePopup(evt.currentTarget);
 };
 
-function closePopupByEsc(esc) {
-    if (esc.key === 'Escape') {
+function closePopupByEsc(evt) {
+    if (evt.key === 'Escape') {
         const popupIsOpened = document.querySelector('.popup_opened');
         closePopup(popupIsOpened);
     }
@@ -137,6 +138,7 @@ function openAddPopup() {
 
 openEditPopupButton.addEventListener('click', openEditPopup);
 openAddPopupButton.addEventListener('click', openAddPopup);
+
 
 
 popups.forEach((popup) => {
