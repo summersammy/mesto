@@ -7,7 +7,7 @@ const currentProfileNameElement = document.querySelector('.profile__info-title')
 const currentProfessionElement = document.querySelector('.profile__info-subtitle');
 const openEditPopupButton = document.querySelector('.profile__edit-button');
 
-// Card
+//Card
 const openAddPopupButton = document.querySelector('.profile__add-button');
 const cardTemplate = document.querySelector('#card-template').content;
 const cardList = document.querySelector('.elements__list');
@@ -35,21 +35,14 @@ const submitButton = addPlacePopup.querySelector('.popup__save');
 function openPopup(popup) {
     popup.classList.add('popup_opened');
     document.addEventListener('keydown', closePopupByEsc);
-    popup.addEventListener('click', closePopupByOverlay)
 }
 
 function closePopup(popup) {
     popup.classList.remove('popup_opened');
     document.removeEventListener('keydown', closePopupByEsc);
-    popup.removeEventListener('click', closePopupByOverlay)
 }
 
-function closePopupByOverlay(evt) {
-    if (evt.target !== evt.currentTarget) {
-        return;
-    }
-    closePopup(evt.currentTarget);
-};
+
 
 function closePopupByEsc(evt) {
     if (evt.key === 'Escape') {
